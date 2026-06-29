@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lúcia Vest | Alta Costura & Elegância na Rua da Divisão</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter para texto, Playfair Display para elegância clássica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide Icons Development Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            colors: {
+              gold: {
+                50: "#fbf8eb",
+                100: "#f5edd2",
+                200: "#ebd9a2",
+                300: "#dec06d",
+                400: "#d1a43f",
+                500: "#b8862b",
+                600: "#9b6821",
+                700: "#7a4b1c",
+                800: "#643d1a",
+                900: "#523318",
+                custom: "#D4AF37",
+              },
+              charcoal: {
+                900: "#0B0B0C",
+                800: "#121214",
+                700: "#1A1A1E",
+                600: "#26262B",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom smooth scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0b0b0c;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4af37;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b8862b;
+      }
+      .text-gold-gradient {
+        background: linear-gradient(135deg, #fff 30%, #d4af37 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .border-gold-glow {
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+      }
+      .modal-active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-charcoal-900 text-gray-100 font-sans antialiased overflow-x-hidden"
+  >
+    <!-- CONTROLE EXCLUSIVO DE APRESENTAÇÃO (Apenas para o Daniel usar no Pitch) -->
+    <div
+      class="bg-gradient-to-r from-gold-900 to-black text-white text-xs py-2 px-4 flex justify-between items-center border-b border-gold-500/30 sticky top-0 z-50 backdrop-blur-md"
+    >
+      <div class="flex items-center gap-2">
+        <span
+          class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"
+        ></span>
+        <span class="font-semibold tracking-wider uppercase"
+          >Protótipo Exclusivo Suprema</span
+        >
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-gray-300">
+        <span
+          >Apresentando para:
+          <strong>Jeferson & Maria de Lourdes</strong> (Lúcia Vest)</span
+        >
+        <span class="text-gold-300">|</span>
+        <span>Versão: 1.0 (Astro + Sanity Ready)</span>
+      </div>
+      <div>
+        <span
+          class="bg-gold-500 text-charcoal-900 font-bold px-2 py-0.5 rounded text-[10px]"
+          >100% INTERATIVO</span
+        >
+      </div>
+    </div>
+
+    <!-- HEADER DA PÁGINA -->
+    <header
+      class="bg-black backdrop-blur-md border-b border-charcoal-800 py-4 px-6 sticky top-8 z-40"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- LOGO: Reconstrução fiel e elegante baseada na imagem real do cliente -->
+        <a href="#" class="flex items-center gap-3 group focus:outline-none">
+          <div class="relative flex flex-col justify-center">
+            <img
+              src="./logo.png"
+              alt="Lúcia Vest"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+              class="w-[120px] h-30"
+            />
+          </div>
+        </a>
+
+        <!-- NAV LINKS -->
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wider uppercase text-gray-400"
+        >
+          <a href="#inicio" class="hover:text-gold-300 transition-colors"
+            >Início</a
+          >
+          <a href="#tradicao" class="hover:text-gold-300 transition-colors"
+            >Nossa História</a
+          >
+          <a
+            href="#catalogo"
+            class="text-gold-300 hover:text-white transition-colors flex items-center gap-1"
+          >
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-custom"></span> Ver
+            Coleções
+          </a>
+          <a href="#localizacao" class="hover:text-gold-300 transition-colors"
+            >Como Chegar</a
+          >
+        </nav>
+
+        <!-- CTA HEADER -->
+        <div class="flex items-center gap-4">
+          <a
+            href="https://wa.me/5567998029626"
+            target="_blank"
+            class="flex items-center gap-2 bg-gradient-to-r from-gold-600 to-gold-400 hover:from-gold-500 hover:to-gold-300 text-charcoal-900 font-bold px-4 py-2 rounded-full text-xs tracking-wider uppercase transition-all duration-300 transform hover:scale-105 shadow-lg shadow-gold-500/10"
+          >
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+            Falar com Vendedora
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION (Vitrine Inicial) -->
+    <section
+      id="inicio"
+      class="relative min-h-[85vh] flex items-center justify-center py-20 px-6 overflow-hidden"
+    >
+      <!-- Background Spotlights -->
+      <div
+        class="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-[120px] pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold-600/5 rounded-full blur-[120px] pointer-events-none"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10"
+      >
+        <!-- Texto Hero -->
+        <div class="lg:col-span-7 flex flex-col items-start gap-6 text-left">
+          <div
+            class="inline-flex items-center gap-2 bg-gold-900/40 border border-gold-500/30 px-3 py-1.5 rounded-full text-xs tracking-widest text-gold-300 uppercase"
+          >
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            Tradição e Modernidade na Rua da Divisão
+          </div>
+          <h1
+            class="font-serif text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-tight"
+          >
+            Sua melhor versão <br />
+            <span class="text-gold-gradient italic">mora no seu estilo.</span>
+          </h1>
+          <p class="text-gray-400 text-lg max-w-xl leading-relaxed font-light">
+            Há mais de 19 anos, vestindo Campo Grande com elegância, conforto e
+            sofisticação. Conheça nossa nova seleção exclusiva de outono e
+            inverno e transforme o seu visual.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+            <a
+              href="#catalogo"
+              class="w-full sm:w-auto text-center bg-white hover:bg-gold-500 text-charcoal-900 hover:text-charcoal-900 font-bold px-8 py-4 rounded-full text-sm tracking-wider uppercase transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl"
+            >
+              Explorar Catálogo Digital
+            </a>
+            <a
+              href="#tradicao"
+              class="w-full sm:w-auto text-center border border-gray-700 hover:border-gold-custom text-gray-300 hover:text-white px-8 py-4 rounded-full text-sm tracking-wider uppercase transition-all duration-300 bg-charcoal-800/40"
+            >
+              Nossos 19 Anos de História
+            </a>
+          </div>
+
+          <!-- Estatísticas/Diferenciais locais -->
+          <div
+            class="grid grid-cols-3 gap-6 pt-8 mt-4 border-t border-charcoal-800 w-full max-w-lg"
+          >
+            <div>
+              <div class="text-2xl font-serif font-bold text-gold-300">
+                19 Anos
+              </div>
+              <div class="text-xs text-gray-500 tracking-wider uppercase mt-1">
+                De Confiança
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-serif font-bold text-gold-300">
+                100k+
+              </div>
+              <div class="text-xs text-gray-500 tracking-wider uppercase mt-1">
+                Peças Vendidas
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-serif font-bold text-gold-300">
+                ★ 4.8
+              </div>
+              <div class="text-xs text-gray-500 tracking-wider uppercase mt-1">
+                Avaliação Local
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagem Destacada (Estilo Passarela) -->
+        <div class="lg:col-span-5 relative w-full flex justify-center">
+          <div
+            class="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden border border-gold-500/20 shadow-2xl group border-gold-glow"
+          >
+            <!-- Imagem principal de moda feminina luxuosa -->
+            <img
+              src="./elegancePremium.avif"
+              alt="Coleção Lúcia Vest"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/10 to-transparent"
+            ></div>
+            <!-- Card sobreposto elegante -->
+            <div
+              class="absolute bottom-6 left-6 right-6 bg-charcoal-800/90 backdrop-blur-md p-4 rounded-xl border border-charcoal-700"
+            >
+              <span
+                class="text-gold-300 text-[10px] tracking-widest uppercase font-bold"
+                >Lançamento de Outono</span
+              >
+              <h3 class="font-serif text-lg text-white font-semibold mt-0.5">
+                Estilo Elegance Premium
+              </h3>
+              <div
+                class="flex justify-between items-center mt-2 pt-2 border-t border-charcoal-700"
+              >
+                <span class="text-sm font-semibold text-gray-300"
+                  >A partir de R$ 189,90</span
+                >
+                <a
+                  href="#catalogo"
+                  class="group flex items-center gap-1 focus:outline-none"
+                >
+                  <span
+                    class="text-gold-custom text-xs font-semibold uppercase tracking-wider flex items-center gap-1 group-hover:underline"
+                  >
+                    Ver Detalhes
+                    <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO TRADIÇÃO (O Poder de 19 Anos) -->
+    <section
+      id="tradicao"
+      class="bg-charcoal-800/50 border-y border-charcoal-800 py-16 px-6 relative"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="order-2 md:order-1 grid grid-cols-2 gap-4">
+          <img
+            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80"
+            alt="Loja Lúcia Vest"
+            class="rounded-xl object-cover h-48 w-full border border-charcoal-700"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80"
+            alt="Elegância Feminina"
+            class="rounded-xl object-cover h-48 w-full border border-gold-500/20 mt-6"
+          />
+        </div>
+        <div class="order-1 md:order-2 flex flex-col gap-6">
+          <div
+            class="flex items-center gap-2 text-gold-300 text-xs tracking-widest uppercase"
+          >
+            <span class="w-6 h-[1px] bg-gold-custom"></span> NOSSA IDENTIDADE
+          </div>
+          <h2
+            class="font-serif text-3xl md:text-4xl font-bold text-white leading-tight"
+          >
+            Mais que uma loja, <br />uma referência na Rua da Divisão
+          </h2>
+          <p class="text-gray-400 text-sm leading-relaxed font-light">
+            Fundada em <strong>2007</strong> sob a visão de vestir bem com um
+            atendimento verdadeiramente pessoal, a
+            <strong>Lúcia Vest</strong> se consolidou no coração do Jardim Aero
+            Rancho e Jardim Parati como sinônimo de confiança.
+          </p>
+          <p class="text-gray-400 text-sm leading-relaxed font-light">
+            Enquanto novos entrantes apostam em plataformas frias e soluções
+            passageiras, nossa dedicação se mantém inabalada: curadoria
+            cuidadosa, qualidade nos tecidos e a certeza de que você sairá
+            confiante em todas as ocasiões.
+          </p>
+          <div class="flex gap-4 items-center">
+            <div
+              class="p-3 bg-gold-950/40 rounded-lg border border-gold-500/20"
+            >
+              <i data-lucide="award" class="w-6 h-6 text-gold-custom"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white">Curadoria Exclusiva</h4>
+              <p class="text-xs text-gray-500 mt-0.5">
+                Roupas que combinam com o clima e a elegância de Campo Grande.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DO CATÁLOGO DE PRODUTOS -->
+    <section id="catalogo" class="py-20 px-6 max-w-7xl mx-auto">
+      <div
+        class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12"
+      >
+        <div class="flex flex-col gap-3 text-left">
+          <div
+            class="inline-flex items-center gap-2 text-gold-300 text-xs tracking-widest uppercase"
+          >
+            <span class="w-6 h-[1px] bg-gold-custom"></span> NOSSA SELEÇÃO
+          </div>
+          <h2 class="font-serif text-4xl font-bold text-white">
+            Catálogo de Elegância
+          </h2>
+          <p class="text-gray-400 text-sm max-w-lg font-light">
+            Toque no produto que mais lhe agrada para ver os detalhes, fotos
+            extras e falar diretamente com nossa consultora no WhatsApp para
+            garantir o seu tamanho.
+          </p>
+        </div>
+        <!-- FILTROS (Completamente Funcionando via JS) -->
+        <div
+          class="flex flex-wrap gap-2 text-xs uppercase font-semibold tracking-wider"
+        >
+          <button
+            onclick="filterCategory('todos')"
+            id="btn-todos"
+            class="category-btn bg-gold-custom text-charcoal-900 px-5 py-2.5 rounded-full transition-all duration-300"
+          >
+            Todos
+          </button>
+          <button
+            onclick="filterCategory('vestidos')"
+            id="btn-vestidos"
+            class="category-btn bg-charcoal-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full transition-all duration-300"
+          >
+            Vestidos
+          </button>
+          <button
+            onclick="filterCategory('conjuntos')"
+            id="btn-conjuntos"
+            class="category-btn bg-charcoal-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full transition-all duration-300"
+          >
+            Conjuntos
+          </button>
+          <button
+            onclick="filterCategory('casual')"
+            id="btn-casual"
+            class="category-btn bg-charcoal-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full transition-all duration-300"
+          >
+            Casual
+          </button>
+        </div>
+      </div>
+
+      <!-- GRID DE PRODUTOS (Carregado Dinamicamente pelo script no rodapé) -->
+      <div
+        id="products-grid"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <!-- Os cards serão injetados via JavaScript com layouts de altíssimo padrão -->
+      </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO & HORÁRIOS -->
+    <section
+      id="localizacao"
+      class="bg-charcoal-800/40 border-t border-charcoal-800 py-20 px-6"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+      >
+        <div class="lg:col-span-5 flex flex-col gap-6 text-left">
+          <div
+            class="inline-flex items-center gap-2 text-gold-300 text-xs tracking-widest uppercase"
+          >
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Visite Nossa Loja
+            Física
+          </div>
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-white">
+            Fácil de achar. <br />Incrível de conhecer.
+          </h2>
+          <p class="text-gray-400 text-sm leading-relaxed font-light">
+            Estamos localizados na área mais tradicional da
+            <strong>Rua da Divisão</strong>. Espaço climatizado, estacionamento
+            facilitado e uma equipe de consultoras prontas para te receber com
+            um café fresco.
+          </p>
+
+          <!-- Informações Detalhadas -->
+          <div class="flex flex-col gap-4 text-sm">
+            <div class="flex gap-3 items-start">
+              <i
+                data-lucide="map-pin"
+                class="w-5 h-5 text-gold-custom shrink-0 mt-0.5"
+              ></i>
+              <div>
+                <strong class="text-white">Endereço Oficial:</strong>
+                <p class="text-gray-400 mt-1">
+                  Rua da Divisão, 554 - Jardim Parati / Aero Rancho<br />Campo
+                  Grande - MS, 79081-650
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <i
+                data-lucide="clock"
+                class="w-5 h-5 text-gold-custom shrink-0 mt-0.5"
+              ></i>
+              <div>
+                <strong class="text-white">Horário de Funcionamento:</strong>
+                <p class="text-gray-400 mt-1">
+                  Segunda a Sexta: 08:30 às 18:00<br />Sábados: 08:30 às 17:00
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <i
+                data-lucide="phone"
+                class="w-5 h-5 text-gold-custom shrink-0 mt-0.5"
+              ></i>
+              <div>
+                <strong class="text-white">Telefone para contato:</strong>
+                <p class="text-gray-400 mt-1">(67) 99802-9626</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa Interativo Ilustrado com Link de Navegação -->
+        <div
+          class="lg:col-span-7 relative w-full h-[400px] rounded-2xl overflow-hidden border border-charcoal-700 group"
+        >
+          <div
+            class="absolute inset-0 bg-charcoal-900/50 group-hover:bg-charcoal-900/20 transition-all duration-500 flex items-center justify-center z-10 pointer-events-none"
+          >
+            <div
+              class="bg-charcoal-800/90 backdrop-blur-md px-6 py-4 rounded-xl border border-gold-500/30 text-center flex flex-col items-center gap-2 max-w-xs"
+            >
+              <i
+                data-lucide="navigation"
+                class="w-8 h-8 text-gold-custom animate-bounce"
+              ></i>
+              <span class="font-serif text-lg font-bold text-white"
+                >Traçar Rota no Google Maps</span
+              >
+              <p class="text-[11px] text-gray-400">
+                Clique para abrir diretamente no seu GPS do celular.
+              </p>
+            </div>
+          </div>
+          <!-- Imagem estilizada simulando o mapa de Campo Grande -->
+          <img
+            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80"
+            alt="Mapa de Localização"
+            class="w-full h-full object-cover opacity-60 filter grayscale select-none"
+          />
+          <!-- Overlay clicável direto para o Google Maps real de Lucia Vest -->
+          <a
+            href="https://maps.google.com/?q=Rua+da+Divisao,+554+-+Jardim+Parati,+Campo+Grande+-+MS"
+            target="_blank"
+            class="absolute inset-0 z-20"
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL DETALHES DO PRODUTO (Estilo Drawer/Overlay Luxuoso) -->
+    <div
+      id="product-modal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300"
+    >
+      <div
+        class="bg-charcoal-800 w-full max-w-4xl rounded-2xl overflow-hidden border border-charcoal-700 grid grid-cols-1 md:grid-cols-12 max-h-[90vh] overflow-y-auto transform scale-95 transition-all duration-300"
+        id="modal-container"
+      >
+        <!-- Botão de Fechar Modal -->
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 z-10 bg-black/50 hover:bg-gold-500/80 text-white hover:text-charcoal-900 p-2 rounded-full transition-all"
+        >
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+
+        <!-- LADO ESQUERDO: Imagem & Galeria Miniaturas -->
+        <div class="md:col-span-6 p-6 flex flex-col gap-4 bg-charcoal-900/40">
+          <div
+            class="aspect-[3/4] rounded-xl overflow-hidden border border-charcoal-700 relative bg-charcoal-800"
+          >
+            <img
+              id="modal-main-img"
+              src=""
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <!-- Miniaturas clicáveis -->
+          <div class="grid grid-cols-3 gap-2" id="modal-thumbnails">
+            <!-- Gerado dinamicamente -->
+          </div>
+        </div>
+
+        <!-- LADO DIREITO: Informações de Compra -->
+        <div class="md:col-span-6 p-8 flex flex-col justify-between text-left">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                id="modal-badge"
+                class="bg-gold-950 border border-gold-500/30 text-gold-300 text-[10px] tracking-widest uppercase px-2.5 py-1 rounded"
+                >Categoria</span
+              >
+              <span class="text-xs text-gray-500 flex items-center gap-1"
+                ><i
+                  data-lucide="check-circle-2"
+                  class="w-3.5 h-3.5 text-emerald-500"
+                ></i>
+                Disponível na Loja</span
+              >
+            </div>
+            <h3
+              id="modal-title"
+              class="font-serif text-3xl font-bold text-white tracking-tight"
+            >
+              Título do Produto
+            </h3>
+
+            <!-- Preço Principal -->
+            <div class="flex items-baseline gap-2 mt-4 mb-6">
+              <span
+                id="modal-price"
+                class="text-3xl font-serif font-bold text-gold-300"
+                >R$ 0,00</span
+              >
+              <span class="text-xs text-gray-500"
+                >em até 12x no cartão de crédito</span
+              >
+            </div>
+
+            <div class="border-t border-charcoal-700 my-4"></div>
+
+            <!-- Descrição -->
+            <div>
+              <span class="text-xs text-gray-500 tracking-wider uppercase"
+                >Descrição do Produto</span
+              >
+              <p
+                id="modal-description"
+                class="text-sm text-gray-400 mt-1 leading-relaxed font-light"
+              >
+                Descrição detalhada.
+              </p>
+            </div>
+
+            <div class="border-t border-charcoal-700 my-4"></div>
+
+            <!-- Seleção de Tamanho -->
+            <div class="mb-8">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-xs text-gray-500 tracking-wider uppercase"
+                  >Selecione o Tamanho</span
+                >
+                <span class="text-xs text-gold-300 underline cursor-pointer"
+                  >Guia de Medidas</span
+                >
+              </div>
+              <div class="flex flex-wrap gap-2" id="modal-sizes">
+                <!-- Gerado dinamicamente -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Botão de Compra e Redirecionamento -->
+          <div class="flex flex-col gap-3">
+            <button
+              id="btn-whatsapp-buy"
+              class="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-gold-600 to-gold-400 hover:from-gold-500 hover:to-gold-300 text-charcoal-900 font-bold py-4 rounded-xl text-sm tracking-wider uppercase transition-all duration-300 transform hover:scale-[1.02] shadow-xl shadow-gold-500/15"
+            >
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              Confirmar Tamanho & Chamar no WhatsApp
+            </button>
+            <p class="text-[11px] text-center text-gray-500">
+              O link gerado enviará a foto e as especificações para a vendedora
+              da loja.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER DA LOJA -->
+    <footer class="bg-black border-t border-charcoal-800 pt-16 pb-12 px-6">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 mb-12"
+      >
+        <!-- Sobre o Cliente -->
+        <div class="md:col-span-5 flex flex-col gap-4 text-left">
+          <img
+            src="./logo.png"
+            alt="Lúcia Vest"
+            loading="lazy"
+            decoding="async"
+            class="w-[120px] h-30"
+          />
+          <p class="text-xs text-gray-500 max-w-sm leading-relaxed mt-2">
+            Lúcia Vest (M.L.m.m. Confecções LTDA) | CNPJ: 08.716.630/0001-79.<br />
+            Há 19 anos vestindo a Rua da Divisão em Campo Grande - MS com o mais
+            puro requinte e estilo feminino.
+          </p>
+          <div class="flex gap-4 mt-2">
+            <a
+              href="https://www.instagram.com/lucia_vest_cg/"
+              target="_blank"
+              class="p-2 bg-charcoal-800 rounded-full hover:bg-gold-500 hover:text-charcoal-900 text-gray-400 transition-all"
+            >
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a
+              href="https://wa.me/5567998029626"
+              target="_blank"
+              class="p-2 bg-charcoal-800 rounded-full hover:bg-gold-500 hover:text-charcoal-900 text-gray-400 transition-all"
+            >
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navegação Rápida -->
+        <div class="md:col-span-3 flex flex-col gap-4 text-left">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-gold-300">
+            Explorar
+          </h4>
+          <ul class="text-xs text-gray-400 flex flex-col gap-2.5">
+            <li>
+              <a href="#inicio" class="hover:text-white transition-colors"
+                >Início</a
+              >
+            </li>
+            <li>
+              <a href="#tradicao" class="hover:text-white transition-colors"
+                >Nossa História</a
+              >
+            </li>
+            <li>
+              <a href="#catalogo" class="hover:text-white transition-colors"
+                >Catálogo Digital</a
+              >
+            </li>
+            <li>
+              <a href="#localizacao" class="hover:text-white transition-colors"
+                >Localização no GPS</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Parceria Suprema -->
+        <div
+          class="md:col-span-4 flex flex-col gap-4 text-left bg-charcoal-800/40 border border-charcoal-800 p-6 rounded-xl"
+        >
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-gold-custom"></span>
+            <h4
+              class="text-xs font-bold uppercase tracking-widest text-gold-300"
+            >
+              Parceria de Performance
+            </h4>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Este é um protótipo exclusivo desenhado e codificado para estudo de
+            posicionamento da <strong>Lúcia Vest</strong> pela empresa
+            <strong>Suprema Desenvolvimento</strong>.
+          </p>
+          <div class="flex items-center gap-2 mt-2">
+            <span class="text-[10px] text-gray-500">Desenvolvido por:</span>
+            <a
+              href="https://supremaux.com"
+              target="_blank"
+              class="text-[11px] font-bold text-white hover:text-gold-300 transition-colors underline decoration-gold-custom"
+              >Daniel Carvalho</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-charcoal-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4"
+      >
+        <p class="text-[10px] text-gray-600">
+          &copy; 2026 Lúcia Vest. Todos os direitos reservados.
+        </p>
+        <p class="text-[10px] text-gray-600 flex items-center gap-1">
+          Feito com
+          <i data-lucide="heart" class="w-3 h-3 text-red-500 fill-red-500"></i>
+          para a Rua da Divisão.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT: Gestão de Estado do Protótipo, Filtros e Modal -->
+    <script>
+      // Banco de Dados de Produtos Mockados de Alto Luxo para o Protótipo
+      const products = [
+        {
+          id: 1,
+          title: "Vestido Canelado Premium",
+          category: "vestidos",
+          price: "R$ 189,90",
+          description:
+            "Com uma modelagem impecável inspirada no clássico xadrez moderno, este vestido de malha canelada oferece caimento estruturado que valoriza a silhueta com total conforto. Ideal para eventos informais ou composições sofisticadas para o outono.",
+          mainImage: "./caneladoPremium.avif",
+          gallery: [
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1612336307429-8a898d10e223?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80",
+          ],
+          sizes: ["P", "M", "G", "GG"],
+        },
+        {
+          id: 2,
+          title: "Conjunto Alfaiataria Diva",
+          category: "conjuntos",
+          price: "R$ 259,90",
+          description:
+            "O requinte definitivo em corte plano. Este conjunto é composto por blazer sob medida de gola estruturada e calça pantalona ajustada no quadril. Caimento fluido, ideal para a mulher que comanda seu espaço com autoridade e presença.",
+          mainImage: "./alfaiatariaDiva.avif",
+          gallery: [
+            "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+          ],
+          sizes: ["M", "G", "GG", "G1"],
+        },
+        {
+          id: 3,
+          title: "Vestido Midi Elegance",
+          category: "vestidos",
+          price: "R$ 219,00",
+          description:
+            "O vestido perfeito para transitar entre um almoço de negócios e um jantar requintado. Com mangas longas bufantes, decote fechado e ajuste de elástico inteligente na cintura que valoriza as curvas.",
+          mainImage: "./midiElegance.avif",
+          gallery: [
+            "https://images.unsplash.com/photo-1539008835151-3434969fb231?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+          ],
+          sizes: ["P", "M", "G"],
+        },
+        {
+          id: 4,
+          title: "Macacão Pantalona Noite",
+          category: "casual",
+          price: "R$ 199,90",
+          description:
+            "Conforto em peça única. Macacão confeccionado em crepe de seda premium, com cinto do próprio tecido para amarração. Elegância e estilo sem esforço para seus finais de semana especiais.",
+          mainImage: "./pantalonaNoite.avif",
+          gallery: [
+            "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=800&q=80",
+          ],
+          sizes: ["P", "M", "G", "GG"],
+        },
+        {
+          id: 5,
+          title: "Suéter Casual Trançado",
+          category: "casual",
+          price: "R$ 149,90",
+          description:
+            "Perfeito para as noites mais frescas em Campo Grande. Um toque suave de algodão e fios acrílicos nobres com trabalho de tranças tridimensionais na frente. Conforto e abraço em forma de peça.",
+          mainImage: "./casualTrancado.avif",
+          gallery: [
+            "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+          ],
+          sizes: ["M", "G", "GG"],
+        },
+        {
+          id: 6,
+          title: "Conjunto Nobre Outono",
+          category: "conjuntos",
+          price: "R$ 279,00",
+          description:
+            "Conjunto exclusivo em veludo texturizado de altíssima qualidade. O blazer desestruturado proporciona um ar moderno e contemporâneo, enquanto a calça cigarrete equilibra com um caimento sob medida.",
+          mainImage: "./nobreOutono.avif",
+          gallery: [
+            "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
+          ],
+          sizes: ["P", "M", "G", "GG", "G1"],
+        },
+      ];
+
+      // Estado do Modal
+      let activeProduct = null;
+      let selectedSize = "";
+
+      // Inicialização do Catálogo
+      window.onload = function () {
+        lucide.createIcons();
+        renderProducts(products);
+      };
+
+      // Renderização dos cards de produtos
+      function renderProducts(productsList) {
+        const grid = document.getElementById("products-grid");
+        grid.innerHTML = "";
+
+        productsList.forEach((product) => {
+          const card = document.createElement("div");
+          card.className =
+            "bg-charcoal-800 rounded-2xl overflow-hidden border border-charcoal-700 hover:border-gold-custom/50 transition-all duration-300 group flex flex-col justify-between cursor-pointer border-gold-glow";
+          card.onclick = () => openModal(product.id);
+
+          card.innerHTML = `
+                    <div class="relative aspect-[3/4] overflow-hidden bg-charcoal-900">
+                        <img src="${product.mainImage}" alt="${product.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/80 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-charcoal-900/80 backdrop-blur-md border border-gold-500/30 text-gold-300 text-[10px] tracking-widest uppercase px-2.5 py-1 rounded">
+                            ${product.category.toUpperCase()}
+                        </span>
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-300 transition-colors">${product.title}</h3>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2 font-light">${product.description}</p>
+                        <div class="flex justify-between items-center mt-4 pt-4 border-t border-charcoal-700">
+                            <span class="text-lg font-serif font-bold text-gold-custom">${product.price}</span>
+                            <span class="text-xs text-gray-400 group-hover:text-white transition-colors flex items-center gap-1">
+                                Ver Detalhes <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gold-custom"></i>
+                            </span>
+                        </div>
+                    </div>
+                `;
+          grid.appendChild(card);
+        });
+        lucide.createIcons();
+      }
+
+      // Filtro por categorias
+      function filterCategory(category) {
+        // Atualizar cor dos botões
+        const buttons = document.querySelectorAll(".category-btn");
+        buttons.forEach((btn) => {
+          btn.className =
+            "category-btn bg-charcoal-800 text-gray-300 hover:text-white px-5 py-2.5 rounded-full transition-all duration-300";
+        });
+
+        const activeBtn = document.getElementById(`btn-${category}`);
+        if (activeBtn) {
+          activeBtn.className =
+            "category-btn bg-gold-custom text-charcoal-900 px-5 py-2.5 rounded-full transition-all duration-300";
+        }
+
+        // Filtrar itens
+        if (category === "todos") {
+          renderProducts(products);
+        } else {
+          const filtered = products.filter((p) => p.category === category);
+          renderProducts(filtered);
+        }
+      }
+
+      // Abrir Modal
+      function openModal(id) {
+        const product = products.find((p) => p.id === id);
+        if (!product) return;
+
+        activeProduct = product;
+        selectedSize = product.sizes[0]; // Tamanho padrão é o primeiro disponível
+
+        document.getElementById("modal-title").innerText = product.title;
+        document.getElementById("modal-price").innerText = product.price;
+        document.getElementById("modal-description").innerText =
+          product.description;
+        document.getElementById("modal-badge").innerText =
+          product.category.toUpperCase();
+
+        const mainImg = document.getElementById("modal-main-img");
+        mainImg.src = product.mainImage;
+
+        // Renderizar miniaturas
+        const thumbsContainer = document.getElementById("modal-thumbnails");
+        thumbsContainer.innerHTML = "";
+        product.gallery.forEach((imgUrl, idx) => {
+          const thumb = document.createElement("button");
+          thumb.className = `aspect-square rounded-lg overflow-hidden border ${idx === 0 ? "border-gold-custom" : "border-charcoal-700"} hover:border-gold-300 transition-all`;
+          thumb.onclick = () => {
+            mainImg.src = imgUrl;
+            // Marcar borda ativa
+            document
+              .querySelectorAll("#modal-thumbnails button")
+              .forEach((b) =>
+                b.classList.replace(
+                  "border-gold-custom",
+                  "border-charcoal-700",
+                ),
+              );
+            thumb.classList.replace(
+              "border-charcoal-700",
+              "border-gold-custom",
+            );
+          };
+          thumb.innerHTML = `<img src="${imgUrl}" class="w-full h-full object-cover">`;
+          thumbsContainer.appendChild(thumb);
+        });
+
+        // Renderizar tamanhos
+        const sizesContainer = document.getElementById("modal-sizes");
+        sizesContainer.innerHTML = "";
+        product.sizes.forEach((size) => {
+          const sizeBtn = document.createElement("button");
+          sizeBtn.className = `w-10 h-10 rounded-lg text-xs font-bold transition-all border ${size === selectedSize ? "bg-gold-custom text-charcoal-900 border-gold-custom" : "bg-charcoal-700 text-gray-300 border-charcoal-600 hover:border-gold-500"}`;
+          sizeBtn.innerText = size;
+          sizeBtn.onclick = () => {
+            selectedSize = size;
+            // Resetar estilos
+            document.querySelectorAll("#modal-sizes button").forEach((b) => {
+              b.className =
+                "w-10 h-10 rounded-lg text-xs font-bold transition-all border bg-charcoal-700 text-gray-300 border-charcoal-600 hover:border-gold-500";
+            });
+            sizeBtn.className =
+              "w-10 h-10 rounded-lg text-xs font-bold transition-all border bg-gold-custom text-charcoal-900 border-gold-custom";
+            updateWhatsAppButton();
+          };
+          sizesContainer.appendChild(sizeBtn);
+        });
+
+        // Configurar botão de WhatsApp inicialmente
+        updateWhatsAppButton();
+
+        // Ativar Modal no DOM
+        const modal = document.getElementById("product-modal");
+        const container = document.getElementById("modal-container");
+        modal.classList.remove("pointer-events-none", "opacity-0");
+        modal.classList.add("opacity-100");
+        container.classList.remove("scale-95");
+        container.classList.add("scale-100");
+      }
+
+      // Fechar modal
+      function closeModal() {
+        const modal = document.getElementById("product-modal");
+        const container = document.getElementById("modal-container");
+        modal.classList.add("pointer-events-none", "opacity-0");
+        modal.classList.remove("opacity-100");
+        container.classList.remove("scale-100");
+        container.classList.add("scale-95");
+      }
+
+      // Atualizar URL de WhatsApp com base no produto e tamanho selecionados
+      function updateWhatsAppButton() {
+        const btn = document.getElementById("btn-whatsapp-buy");
+
+        // Formatando a mensagem perfeita de conversão de leads
+        const message = `Olá, tudo bem! Gostaria de saber mais sobre o *${activeProduct.title}* (Tamanho ${selectedSize} | Categoria: ${activeProduct.category.toUpperCase()}) que vi no seu novo catálogo digital. Tem disponível na loja para eu provar?`;
+        const encodedText = encodeURIComponent(message);
+        const phoneNumber = "5567998029626"; // Telefone oficial Lúcia Vest
+
+        btn.onclick = () => {
+          window.open(
+            `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`,
+            "_blank",
+          );
+        };
+      }
+    </script>
+  </body>
+</html>
